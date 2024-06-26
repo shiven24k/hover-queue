@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(24, 24, 24);
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.list .item img{
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    
+    
+}
+.list{
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.list .item{
+    transition: .5s;
+    filter: brightness(0);
+}
+.list .item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+}
+.list .item:hover + .item{
+    filter: brightness(.6);
+    transform: translateZ(150px) rotateY(40deg);
+}
